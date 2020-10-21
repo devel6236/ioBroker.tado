@@ -123,7 +123,7 @@ class Tado extends utils.Adapter {
 														
 							case ('temperature'):
 								this.log.info('Temperature changed for room : ' + deviceId[4] + ' in home : ' + deviceId[2] + ' to API with : ' + state.val);							
-								await this.setZoneOverlay(deviceId[2], deviceId[4],'on',state.val, set_mode);
+								await this.setZoneOverlay(deviceId[2], deviceId[4],'on',state.val, 'manual');
 
 								this.DoConnect();
 
@@ -133,14 +133,15 @@ class Tado extends utils.Adapter {
 
 								if(set_mode  === 'auto' && state.val === 'ON' ) {
 
-									await this.clearZoneOverlay(deviceId[2],deviceId[4]);
+									//await this.clearZoneOverlay(deviceId[2],deviceId[4]);
+									await this.setZoneOverlay(deviceId[2], deviceId[4],state.val,set_temp, 'manual');
 
 								} else {
 
 									try {
 
 										this.log.info('Power changed for room : ' + deviceId[4] + ' in home : ' + deviceId[2] + ' to API with : ' + state.val + ' and Temperature : ' + set_temp + ' and mode : ' + set_mode);
-										await this.setZoneOverlay(deviceId[2], deviceId[4],state.val,set_temp, mode);
+										await this.setZoneOverlay(deviceId[2], deviceId[4],state.val,set_temp, 'manual');
 											
 									} catch (error) {
 										this.log.error('Power changed for room : ' + deviceId[4] + ' in home : ' + deviceId[2] + ' to API with : ' + state.val + '  error from temperature : ' + error);
@@ -249,7 +250,7 @@ class Tado extends utils.Adapter {
 				await this.DoHome(this.getMe_data.homes[i].id);
 				await this.DoDevices(this.getMe_data.homes[i].id);
 				await this.DoWeather(this.getMe_data.homes[i].id);
-				await this.DoInstallations(this.getMe_data.homes[i].id);
+				//await this.DoInstallations(this.getMe_data.homes[i].id);
 				
 				// this.getInstallations(this.getMe_data.homes[i].id);	
 				// await this.DoUsers(this.getMe_data.homes[i].id) 	// User information equal to Weather, ignoring function but keep for history/feature functionality
@@ -404,10 +405,9 @@ class Tado extends utils.Adapter {
 	}
 
 	// Function disabled, no data in API ?
-	// getDevices(home_id) {
-	// 	this.log.info('getDevices called')
-	// 	return this.apiCall(`/api/v2/homes/${home_id}/devices`);
-	// }
+	goDevices(home_id) {
+	 	return this.apiCall(`/api/v2/homes/${home_id}/devices`);
+	 }
 
 	// Function disabled, no data in API ?
 	getInstallations(home_id) {
@@ -686,6 +686,7 @@ class Tado extends utils.Adapter {
 		this.DoWriteJsonRespons(HomeId,'Stage_04_Weather', weather_data);
 		for (const i in weather_data){
 			this.log.debug('Weather' + i + ' with value : ' + JSON.stringify(weather_data[i]));
+			
 			// Info channel for Each Home
 			await this.setObjectNotExistsAsync(HomeId + '.Weather', {
 				type: 'channel',
@@ -718,10 +719,33 @@ class Tado extends utils.Adapter {
 	}
 
 	async DoDevices(HomeId){
-		const Devices_data = await this.getDevices(HomeId);
+		const Devices_data = await this.goDevices(HomeId);
 		this.log.debug('Users_data Result : ' + JSON.stringify(Devices_data));
 		this.DoWriteJsonRespons(HomeId,'Stage_03_Devices', Devices_data);
+		
+		// Info channel for Bridge
+		await this.setObjectNotExistsAsync(HomeId + '.Bridge', {
+			type: 'channel',
+			common: {
+				name: 'Bridge connected to Tado',
+			},
+			native: {},
+		});
 
+		// Info channel for Bridge
+		await this.setObjectNotExistsAsync(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo, {
+			type: 'channel',
+			common: {
+				name: Devices_data[0].deviceType + '-' + Devices_data[0].serialNo,
+			},
+			native: {},
+		});
+		
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.deviceType', 'deviceType', Devices_data[0].deviceType);
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.serialNo', 'serialNo', Devices_data[0].serialNo);
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.currentFwVersion', 'currentFwVersion', Devices_data[0].currentFwVersion);
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.inPairingMode', 'inPairingMode', Devices_data[0].inPairingMode);
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.connectionState', 'connectionState', Devices_data[0].connectionState.value);
 		
 	}
 
