@@ -188,8 +188,8 @@
         "main": "main.js",
         "icon": "tado.png",
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tado/master/admin/tado.png",
-        "readme": "https://github.com/iobroker-community-adapters/ioBroker.tado/blob/master/README.md",
+        "extIcon": "https://raw.githubusercontent.com/devel6236/ioBroker.tado/master/admin/tado.png",
+        "readme": "https://github.com/devel6236/ioBroker.tado/blob/master/README.md",
         "loglevel": "info",
         "mode": "daemon",
         "type": "climate-control",
@@ -209,7 +209,7 @@
     "native": {
         "Username": "",
         "Password": "",
-        "intervall": 30
+        "intervall": 20
     },
     "objects": [],
     "instanceObjects": [
