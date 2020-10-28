@@ -669,11 +669,13 @@ class Tado extends utils.Adapter {
 						this.create_state(HomeId + '._info.incidentDetection.' + y, y, this.Home_data[i][y]);
 					}
 					break;
+					
+				case ('autoAssistFreeTrialEnabled'):
+					this.create_state(HomeId + '._info. ' + i, i, this.Home_data[i]);
+					break;
 
 				default:
-					this.log.error('Send this info to developer !!! { Unhandable information found in DoHome : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(this.Home_data[i]));
-
-
+					this.log.warn('Send this info to developer !!! { Unhandable information found in DoHome : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(this.Home_data[i]));
 			}
 			// }
 		}
@@ -711,7 +713,7 @@ class Tado extends utils.Adapter {
 					break;
 
 				default:
-					this.log.error('Send this info to developer !!! { Unhandable information found in DoHWeather : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(weather_data[i]));
+					this.log.warn('Send this info to developer !!! { Unhandable information found in DoHWeather : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(weather_data[i]));
 
 			}	
 		}					
@@ -832,7 +834,7 @@ class Tado extends utils.Adapter {
 					
 
 					default:
-						this.log.error('Send this info to developer !!! { Unhandable information found in DoMobile_Devices : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(this.MobileDevices_data[i][y]));
+						this.log.warn('Send this info to developer !!! { Unhandable information found in DoMobile_Devices : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(this.MobileDevices_data[i][y]));
 				}
 			}
 			await this.DoMobileDeviceSettings(HomeId,this.MobileDevices_data[i].id);		
@@ -878,7 +880,7 @@ class Tado extends utils.Adapter {
 					break;
 
 				default:
-					this.log.error('Send this info to developer !!! { Unhandable information found in DoMobileDeviceSettings : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(MobileDeviceSettings_data[i]));
+					this.log.warn('Send this info to developer !!! { Unhandable information found in DoMobileDeviceSettings : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(MobileDeviceSettings_data[i]));
 
 			}
 
@@ -1008,7 +1010,7 @@ class Tado extends utils.Adapter {
 						
 
 					default:
-						this.log.error('Send this info to developer !!! { Unhandable information found in DoZones : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(this.Zones_data [i][y]));
+						this.log.warn('Send this info to developer !!! { Unhandable information found in DoZones : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(this.Zones_data [i][y]));
 				}
 			}
 			const basic_tree = HomeId + '.Rooms.' + this.Zones_data [i].id;
@@ -1163,7 +1165,7 @@ class Tado extends utils.Adapter {
 						break;
 
 					default:
-						this.log.error('Send this info to developer !!! { Unhandable information found in DoReadDevices : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(Devices_data[i][y]));
+						this.log.warn('Send this info to developer !!! { Unhandable information found in DoReadDevices : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(Devices_data[i][y]));
 						this.DoWriteJsonRespons(state_root + '.Test_Data','Test_Data', Devices_data);
 				}
 			}
@@ -1343,7 +1345,7 @@ class Tado extends utils.Adapter {
 																
 
 												default:
-													this.log.error('Send this info to developer !!! { Unhandable information found in DoZoneStates overlay termination : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(ZonesState_data[i][x][y]));
+													this.log.warn('Send this info to developer !!! { Unhandable information found in DoZoneStates overlay termination : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(ZonesState_data[i][x][y]));
 
 											}
 
@@ -1356,7 +1358,7 @@ class Tado extends utils.Adapter {
 
 
 								default:
-									this.log.error('Send this info to developer !!! { Unhandable information found in DoReadDevices overlay : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(ZonesState_data[i]));
+									this.log.warn('Send this info to developer !!! { Unhandable information found in DoReadDevices overlay : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(ZonesState_data[i]));
 							}
 
 						}
@@ -1417,7 +1419,7 @@ class Tado extends utils.Adapter {
 						break;	
 						
 					default:
-						this.log.error('Send this info to developer !!! { Unhandable information found in DoZoneState : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(ZonesState_data[i]));
+						this.log.warn('Send this info to developer !!! { Unhandable information found in DoZoneState : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(ZonesState_data[i]));
 				}
 			} 
 		}
@@ -1473,7 +1475,7 @@ class Tado extends utils.Adapter {
 					this.create_state(state_root_states + '.AwayConfiguration.' + i, i, AwayConfiguration_data[i]);
 					break;
 				default:
-					this.log.error('Send this info to developer !!! { Unhandable information found in DoAwayConfiguration : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(AwayConfiguration_data[i]));
+					this.log.warn('Send this info to developer !!! { Unhandable information found in DoAwayConfiguration : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(AwayConfiguration_data[i]));
 			}
 		}
 	}
