@@ -16,6 +16,16 @@ If you like my work, please feel free to provide a personal donation
     ## __WORK IN PROGRESS__
 -->
 
+### 0.2.2 (2020-10-28)
+* (DutchmanNL) Update dependency's
+* (DutchmanNL) Update testing, remove node 8 and add node 14
+* (DutchmanNL) Implement automated deployment with githubActions
+* (HGlab01) Support incident Detection
+* (LutzHelling) Bugfix : Add orientation
+* (LutzHelling) Bugfix : legacyHeatingInstallationsEnabled
+* (HGlab01) Bugfix : Add legacyHeatingInstallationsEnabled to DoHome
+* (HGlab01) Bugfix : Fix unhandled information found in DoReadDevices 
+
 ### 0.2.0 (2020-09-29)
 * (DutchmanNL) Update dependency's
 * (DutchmanNL) Update testing, remove node 8 and add node 14
