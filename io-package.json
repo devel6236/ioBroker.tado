@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "tado",
-        "version": "0.2.2",
+        "version": "0.2.3",
         "news": {
             "0.2.3": {
                 "en": "Update dependency's\nUpdate testing, remove node 8 and add node 14\nImplement automated deployment with githubActions\nSupport incident Detection\nBugfix : Add orientation\nBugfix : legacyHeatingInstallationsEnabled\nBugfix : Add legacyHeatingInstallationsEnabled to DoHome\nBugfix : Fix unhandled information found in DoReadDevices",
