@@ -3,7 +3,7 @@
         "name": "tado",
         "version": "0.2.2",
         "news": {
-            "0.2.2": {
+            "0.2.3": {
                 "en": "Update dependency's\nUpdate testing, remove node 8 and add node 14\nImplement automated deployment with githubActions\nSupport incident Detection\nBugfix : Add orientation\nBugfix : legacyHeatingInstallationsEnabled\nBugfix : Add legacyHeatingInstallationsEnabled to DoHome\nBugfix : Fix unhandled information found in DoReadDevices",
                 "de": "Abhängigkeiten aktualisieren\nAktualisieren Sie die Tests, entfernen Sie Knoten 8 und fügen Sie Knoten 14 hinzu\nImplementieren Sie die automatisierte Bereitstellung mit githubActions\nSupport Incident Detection\nBugfix: Orientierung hinzufügen\nBugfix: LegacyHeatingInstallationsEnabled\nBugfix: LegacyHeatingInstallationsEnabled zu DoHome hinzufügen\nBugfix: Nicht behandelte Informationen in DoReadDevices korrigieren",
                 "ru": "Обновить зависимость\nОбновите тестирование, удалите узел 8 и добавьте узел 14\nРеализуйте автоматическое развертывание с помощью githubActions\nПоддержка обнаружения инцидентов\nИсправление: добавить ориентацию\nИсправление: legacyHeatingInstallationsEnabled\nИсправление: добавление legacyHeatingInstallationsEnabled в DoHome\nИсправление: исправление необработанной информации, обнаруженной в DoReadDevices.",
