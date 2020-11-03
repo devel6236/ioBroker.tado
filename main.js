@@ -140,7 +140,7 @@ class Tado extends utils.Adapter {
 
 									try {
 
-										this.log.info('Leistung geändert für Raum: ' + deviceId[4] + ' in HomeID: ' + deviceId[2] + ' und Temperatur: ' + set_temp);
+										this.log.info('Leistung geändert für Raum: ' + deviceId[4] + ' in HomeID: ' + deviceId[2] + ' und Temperatur: ' + set_temp + '°C');
 										await this.setZoneOverlay(deviceId[2], deviceId[4],state.val,set_temp, 'manual');
 											
 									} catch (error) {
