@@ -16,8 +16,8 @@ If you like my work, please feel free to provide a personal donation
     ## __WORK IN PROGRESS__
 -->
 
-### 0.2.2 (2020-10-28)
-* (DutchmanNL) Update dependency's
+### 0.2.3 (2020-11-03)
+* (devel6236) Update dependency's
 * (DutchmanNL) Update testing, remove node 8 and add node 14
 * (DutchmanNL) Implement automated deployment with githubActions
 * (HGlab01) Support incident Detection
