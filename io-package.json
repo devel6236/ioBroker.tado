@@ -1,9 +1,33 @@
 {
     "common": {
         "name": "tado",
-        "version": "0.2.4",
+        "version": "0.2.3",
         "news": {
             "0.2.4": {
+                "en": "add overlay methods 'timer'\ndeal with JSON object overlay or openWindow is null\nBugfix : Cannot read property 'percentage' of undefined",
+                "de": "Overlay-Methoden hinzufügen 'Timer'\nUmgang mit JSON-Objekt-Overlay oder openWindow ist null\nBugfix: Eigenschaft 'Prozentsatz' von undefiniert kann nicht gelesen werden",
+                "ru": "добавить методы наложения 'таймер'\nиметь дело с наложением объекта JSON или openWindow имеет значение null\nИсправление: не удавалось прочитать свойство \"процент\" неопределенного значения.",
+                "pt": "adicionar métodos de sobreposição 'temporizador'\nlidar com sobreposição de objeto JSON ou openWindow é nulo\nCorreção: não é possível ler a propriedade 'porcentagem' de indefinido",
+                "nl": "voeg overlay-methoden 'timer' toe\nomgaan met JSON-objectoverlay of openWindow is null\nBugfix: Kan eigenschap 'percentage' van ongedefinieerd niet lezen",
+                "fr": "ajouter des méthodes de superposition 'timer'\ntraiter la superposition d'objets JSON ou openWindow est nul\nCorrectif: impossible de lire la propriété 'pourcentage' de non défini",
+                "it": "aggiungi metodi di sovrapposizione \"timer\"\ntrattare con la sovrapposizione di oggetti JSON o openWindow è nullo\nErrore corretto: impossibile leggere la 'percentuale' della proprietà di undefined",
+                "es": "agregar métodos de superposición 'temporizador'\ntratar con la superposición de objetos JSON o openWindow es nulo\nCorrección de error: no se puede leer la propiedad 'porcentaje' de indefinido",
+                "pl": "dodaj stoper metod nakładania\nradzić sobie z nakładką obiektu JSON lub openWindow ma wartość null\nPoprawka: nie można odczytać wartości „procent” wartości niezdefiniowanej",
+                "zh-cn": "添加叠加方法“计时器”\n处理JSON对象覆盖或openWindow为null\n错误修正：无法读取未定义的属性“百分比”"
+            },
+            "0.2.2": {
+                "en": "add typeSkillBasedApp\nadd autoAssistFreeTrialEnabled\nAdd support for autoAssistFreeTrialEnabled\nOverlay methods 'manual' and 'next time block'",
+                "de": "Fügen Sie typeSkillBasedApp hinzu\nFügen Sie autoAssistFreeTrialEnabled hinzu\nUnterstützung für autoAssistFreeTrialEnabled hinzufügen\nÜberlagerungsmethoden 'manuell' und 'nächster Zeitblock'",
+                "ru": "добавить typeSkillBasedApp\nдобавить autoAssistFreeTrialEnabled\nДобавить поддержку autoAssistFreeTrialEnabled\nМетоды наложения \"вручную\" и \"в следующий раз\"",
+                "pt": "adicionar typeSkillBasedApp\nadd autoAssistFreeTrialEnabled\nAdicionar suporte para autoAssistFreeTrialEnabled\nMétodos de sobreposição 'manual' e 'bloco da próxima vez'",
+                "nl": "voeg typeSkillBasedApp toe\nvoeg autoAssistFreeTrialEnabled toe\nOndersteuning toegevoegd voor autoAssistFreeTrialEnabled\nOverlay-methoden 'handmatig' en 'volgende tijdsblok'",
+                "fr": "ajouter le typeSkillBasedApp\najouter autoAssistFreeTrialEnabled\nAjouter la prise en charge de autoAssistFreeTrialEnabled\nMéthodes de superposition \"manuelle\" et \"bloc horaire suivant\"",
+                "it": "aggiungi typeSkillBasedApp\naggiungi autoAssistFreeTrialEnabled\nAggiungi il supporto per autoAssistFreeTrialEnabled\nMetodi di sovrapposizione \"manuale\" e \"blocco successivo\"",
+                "es": "agregar typeSkillBasedApp\nagregar autoAssistFreeTrialEnabled\nAgregar soporte para autoAssistFreeTrialEnabled\nMétodos de superposición 'manual' y 'bloque de próxima vez'",
+                "pl": "dodaj typeSkillBasedApp\ndodaj autoAssistFreeTrialEnabled\nDodaj obsługę autoAssistFreeTrialEnabled\nMetody nakładania „ręczne” i „następny blok czasowy”",
+                "zh-cn": "添加typeSkillBasedApp\n添加autoAssistFreeTrialEnabled\n添加对autoAssistFreeTrialEnabled的支持\n叠加方法“手动”和“下一个时间段”"
+            },
+            "0.2.1": {
                 "en": "Update dependency's\nUpdate testing, remove node 8 and add node 14\nImplement automated deployment with githubActions\nSupport incident Detection\nBugfix : Add orientation\nBugfix : legacyHeatingInstallationsEnabled\nBugfix : Add legacyHeatingInstallationsEnabled to DoHome\nBugfix : Fix unhandled information found in DoReadDevices",
                 "de": "Abhängigkeiten aktualisieren\nAktualisieren Sie die Tests, entfernen Sie Knoten 8 und fügen Sie Knoten 14 hinzu\nImplementieren Sie die automatisierte Bereitstellung mit githubActions\nSupport Incident Detection\nBugfix: Orientierung hinzufügen\nBugfix: LegacyHeatingInstallationsEnabled\nBugfix: LegacyHeatingInstallationsEnabled zu DoHome hinzufügen\nBugfix: Nicht behandelte Informationen in DoReadDevices korrigieren",
                 "ru": "Обновить зависимость\nОбновите тестирование, удалите узел 8 и добавьте узел 14\nРеализуйте автоматическое развертывание с помощью githubActions\nПоддержка обнаружения инцидентов\nИсправление: добавить ориентацию\nИсправление: legacyHeatingInstallationsEnabled\nИсправление: добавление legacyHeatingInstallationsEnabled в DoHome\nИсправление: исправление необработанной информации, обнаруженной в DoReadDevices.",
