@@ -154,14 +154,9 @@ class Tado extends utils.Adapter {
 								break;
 
 							case ('typeSkillBasedApp'):
-								//if (set_mode == 'NO_OVERLAY') { break; }
-								if (set_mode == 'NO_OVERLAY') {
-									this.log.info('Overlay cleared for room : ' + deviceId[4] + ' in home : ' + deviceId[2]);
-									await this.clearZoneOverlay(deviceId[2],deviceId[4]);
-								}else{
-									this.log.info('TypeSkillBasedApp changed for room : ' + deviceId[4] + ' in home : ' + deviceId[2] + ' to API with : ' + set_mode);
-									await this.setZoneOverlay(deviceId[2], deviceId[4],set_power,set_temp,set_mode,set_durationInSeconds);
-								}
+								if (set_mode == 'NO_OVERLAY') { break; }
+								this.log.info('TypeSkillBasedApp changed for room : ' + deviceId[4] + ' in home : ' + deviceId[2] + ' to API with : ' + set_mode);
+								await this.setZoneOverlay(deviceId[2], deviceId[4],set_power,set_temp,set_mode,set_durationInSeconds);
 								this.DoConnect();
 								break;
 
