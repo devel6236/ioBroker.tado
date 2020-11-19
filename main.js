@@ -431,10 +431,10 @@ class Tado extends utils.Adapter {
 	}
 
 	// Function disabled, no data in API ?
-	// getDevices(home_id) {
-	// 	this.log.info('getDevices called')
-	// 	return this.apiCall(`/api/v2/homes/${home_id}/devices`);
-	// }
+		goDevices(home_id) {
+		this.log.info('getDevices called')
+	 	return this.apiCall(`/api/v2/homes/${home_id}/devices`);
+	}
 
 	// Function disabled, no data in API ?
 	getInstallations(home_id) {
@@ -749,7 +749,7 @@ class Tado extends utils.Adapter {
 	}
 
 	async DoDevices(HomeId){
-		const Devices_data = await this.getDevices(HomeId);
+		const Devices_data = await this.goDevices(HomeId);
 		this.log.debug('Users_data Result : ' + JSON.stringify(Devices_data));
 		this.DoWriteJsonRespons(HomeId,'Stage_03_Devices', Devices_data);
 
