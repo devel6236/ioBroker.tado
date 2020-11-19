@@ -16,7 +16,10 @@ If you like my work, please feel free to provide a personal donation
     ## __WORK IN PROGRESS__
 -->
 
-### 0.2.4 (2020-11-03)
+### 0.2.4 (2020-11-19)
+* 
+
+### 0.2.3 (2020-11-03)
 * (devel6236) Update dependency's
 * (DutchmanNL) Update testing, remove node 8 and add node 14
 * (DutchmanNL) Implement automated deployment with githubActions
