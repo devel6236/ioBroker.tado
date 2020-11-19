@@ -432,7 +432,7 @@ class Tado extends utils.Adapter {
 
 	// Function disabled, no data in API ?
 		goDevices(home_id) {
-		this.log.info('getDevices called')
+		this.log.debug('getDevices called')
 	 	return this.apiCall(`/api/v2/homes/${home_id}/devices`);
 	}
 
