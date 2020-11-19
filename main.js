@@ -753,7 +753,29 @@ class Tado extends utils.Adapter {
 		this.log.debug('Users_data Result : ' + JSON.stringify(Devices_data));
 		this.DoWriteJsonRespons(HomeId,'Stage_03_Devices', Devices_data);
 
+		// Info channel for Bridge
+		await this.setObjectNotExistsAsync(HomeId + '.Bridge', {
+			type: 'channel',
+			common: {
+				name: 'Bridge connected to Tado',
+			},
+			native: {},
+		});
 
+		// Info channel for Bridge
+		await this.setObjectNotExistsAsync(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo, {
+			type: 'channel',
+			common: {
+				name: Devices_data[0].deviceType + '-' + Devices_data[0].serialNo,
+			},
+			native: {},
+		});
+		
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.deviceType', 'deviceType', Devices_data[0].deviceType);
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.serialNo', 'serialNo', Devices_data[0].serialNo);
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.currentFwVersion', 'currentFwVersion', Devices_data[0].currentFwVersion);
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.inPairingMode', 'inPairingMode', Devices_data[0].inPairingMode);
+		this.create_state(HomeId + '.Bridge.' + Devices_data[0].deviceType + '-' + Devices_data[0].serialNo + '.connectionState', 'connectionState', Devices_data[0].connectionState.value);
 	}
 
 	async DoInstallations(HomeId){
