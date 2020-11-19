@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "tado",
-        "version": "0.2.3",
+        "version": "0.2.4",
         "news": {
             "0.2.4": {
                 "en": "add overlay methods 'timer'\ndeal with JSON object overlay or openWindow is null\nBugfix : Cannot read property 'percentage' of undefined",
