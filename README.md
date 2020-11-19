@@ -17,7 +17,7 @@ If you like my work, please feel free to provide a personal donation
 -->
 
 ### 0.2.4 (2020-11-19)
-* 
+* (devel6236) Add Bridge
 
 ### 0.2.3 (2020-11-03)
 * (devel6236) Update dependency's
