@@ -1052,13 +1052,13 @@ class Tado extends utils.Adapter {
 			}
 
 
-			try {
+			//try {
 			// Unclear purpose, ignore for now
-				await this.DoZoneCapabilities(HomeId, this.Zones_data [i].id);
-
-			} catch (error) {
-				this.log.error('Issue getting ZoneCapabilities ' + error);
-			}
+			//	await this.DoZoneCapabilities(HomeId, this.Zones_data [i].id);
+			//
+			//} catch (error) {
+			//	this.log.error('Issue getting ZoneCapabilities ' + error);
+			//}
 
 
 			try {
@@ -1071,8 +1071,8 @@ class Tado extends utils.Adapter {
 
 
 
-			await this.DoAwayConfiguration(HomeId, this.Zones_data [i].id, basic_tree);
-			await this.DoTimeTables(HomeId, this.Zones_data [i].id);
+			//await this.DoAwayConfiguration(HomeId, this.Zones_data [i].id, basic_tree);
+			//await this.DoTimeTables(HomeId, this.Zones_data [i].id);
 
 		}
 	}
