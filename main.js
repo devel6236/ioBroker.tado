@@ -279,8 +279,8 @@ class Tado extends utils.Adapter {
 				// Write basic data to home specific info channel states
 				await this.DoHome(this.getMe_data.homes[i].id);
 				await this.DoDevices(this.getMe_data.homes[i].id);
-				await this.DoWeather(this.getMe_data.homes[i].id);
-				await this.DoInstallations(this.getMe_data.homes[i].id);
+				//await this.DoWeather(this.getMe_data.homes[i].id);
+				//await this.DoInstallations(this.getMe_data.homes[i].id);
 
 				// this.getInstallations(this.getMe_data.homes[i].id);
 				// await this.DoUsers(this.getMe_data.homes[i].id) 	// User information equal to Weather, ignoring function but keep for history/feature functionality
