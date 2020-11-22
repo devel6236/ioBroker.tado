@@ -868,7 +868,7 @@ class Tado extends utils.Adapter {
 						this.log.warn('Send this info to developer !!! { Unhandable information found in DoMobile_Devices : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(this.MobileDevices_data[i][y]));
 				}
 			}
-			await this.DoMobileDeviceSettings(HomeId,this.MobileDevices_data[i].id);
+			//await this.DoMobileDeviceSettings(HomeId,this.MobileDevices_data[i].id);
 		}
 
 	}
