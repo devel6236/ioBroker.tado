@@ -1194,10 +1194,6 @@ class Tado extends utils.Adapter {
 							this.create_state(state_root_device + '.' + y + '.' + x, y, Devices_data[i][y][x]);
 						}
 						break;
-					
-					case ('childLockEnabled'):
-						this.create_state(state_root_device + '.' + y, y, Devices_data[i][y].value);
-						break;
 
 					default:
 						this.log.warn('Send this info to developer !!! { Unhandable information found in DoReadDevices : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(Devices_data[i][y]));
