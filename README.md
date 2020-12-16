@@ -1,15 +1,6 @@
  # ioBroker.tado 
 <img src="./admin/tado.png" width="50" height="50">
 
-## tado adapter for ioBroker
-
-tado° ensures a comfortable and healthy climate while saving up to 31% on your heating bill.
-
-## Support me
-If you like my work, please feel free to provide a personal donation  
-(this is an personal Donate link for DutchmanNL, no relation to the ioBroker Project !  
-[![Donate](https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tado/master/admin/button.png)](http://paypal.me/DutchmanNL)
-
 ## Changelog
 <!--
     Placeholder for the next version (at the beginning of the line):
