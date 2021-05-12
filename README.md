@@ -7,8 +7,8 @@
     ## __WORK IN PROGRESS__
 -->
 
-### 0.2.5 (2020-12-16)
-* (HGlab01) add childLockEnabled
+### 0.2.7 (2021-05-12)
+* (HGlab01) add childLockEnabled, enabledFeatures
 
 ### 0.2.4 (2020-11-19)
 * (devel6236) Add Bridge
