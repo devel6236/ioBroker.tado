@@ -1,19 +1,19 @@
 {
     "common": {
         "name": "tado",
-        "version": "0.2.5",
+        "version": "0.2.7",
         "news": {
-            "0.2.5": {
-                "en": "add childLockEnabled",
-                "de": "füge childLockEnabled hinzu",
-                "ru": "добавить childLockEnabled",
-                "pt": "adicionar childLockEnabled",
-                "nl": "toevoegen childLockEnabled",
-                "fr": "ajouter childLockEnabled",
-                "it": "aggiungi childLockEnabled",
-                "es": "agregar childLockEnabled",
-                "pl": "dodaj childLockEnabled",
-                "zh-cn": "添加childLockEnabled"
+            "0.2.7": {
+                "en": "add childLockEnabled, enabledFeatures",
+                "de": "füge childLockEnabled, enabledFeatures hinzu",
+                "ru": "добавить childLockEnabled, enabledFeatures",
+                "pt": "adicionar childLockEnabled, enabledFeatures",
+                "nl": "toevoegen childLockEnabled, enabledFeatures",
+                "fr": "ajouter childLockEnabled, enabledFeatures",
+                "it": "aggiungi childLockEnabled, enabledFeatures",
+                "es": "agregar childLockEnabled, enabledFeatures",
+                "pl": "dodaj childLockEnabled, enabledFeatures",
+                "zh-cn": "添加childLockEnabled, enabledFeatures"
             },
             "0.2.4": {
                 "en": "add overlay methods 'timer'\ndeal with JSON object overlay or openWindow is null\nBugfix : Cannot read property 'percentage' of undefined",
