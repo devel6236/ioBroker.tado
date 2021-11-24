@@ -1051,6 +1051,11 @@ class Tado extends utils.Adapter {
 
 						this.create_state(state_root, y, this.Zones_data [i][y]);
 						break;
+						
+					case ('showScheduleSetup'):
+
+					this.create_state(state_root, y, this.Zones_data [i][y]);
+					break;
 
 					default:
 						this.log.warn('Send this info to developer !!! { Unhandable information found in DoZones : ' + JSON.stringify(y) + ' with value : ' + JSON.stringify(this.Zones_data [i][y]));
