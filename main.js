@@ -716,10 +716,13 @@ class Tado extends utils.Adapter {
 				case ('isAirComfortEligible'):
 					this.create_state(HomeId + '._info. ' + i, i, JSON.stringify(this.Home_data[i]));
 					break;
+					
+				case ('isBalanceAcEligible'):
+				this.create_state(HomeId + '._info. ' + i, i, JSON.stringify(this.Home_data[i]));
+				break;
 
 				default:
 					this.log.warn('Send this info to developer !!! { Unhandable information found in DoHome : ' + JSON.stringify(i) + ' with value : ' + JSON.stringify(this.Home_data[i]));
-
 
 			}
 			// }
