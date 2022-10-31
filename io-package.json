@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "tado",
-        "version": "0.2.7",
+        "version": "0.2.8",
         "news": {
+            "0.2.8": {
+                "en": "add isBalanceAcEligible",
+                "de": "füge isBalanceAcEligible hinzu",
+                "ru": "добавить isBalanceAcEligible",
+                "pt": "adicionar isBalanceAcEligible",
+                "nl": "toevoegen isBalanceAcEligible",
+                "fr": "ajouter isBalanceAcEligible",
+                "it": "aggiungi isBalanceAcEligible",
+                "es": "agregar isBalanceAcEligible",
+                "pl": "dodaj isBalanceAcEligible",
+                "zh-cn": "添加isBalanceAcEligible"
+            },
             "0.2.7": {
                 "en": "add childLockEnabled, enabledFeatures",
                 "de": "füge childLockEnabled, enabledFeatures hinzu",
