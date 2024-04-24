@@ -1266,7 +1266,7 @@ class Tado extends utils.Adapter {
 			if (ZonesState_data[i] !== null && JSON.stringify(ZonesState_data[i]) !== '{}' ){
 
 				switch (i){
-
+						
 					case ('activityDataPoints'):
 						if (ZonesState_data[i].heatingPower != undefined) {
 							this.create_state(state_root_states + '.heatingPower', 'heatingPower', ZonesState_data[i].heatingPower.percentage);
@@ -1276,7 +1276,6 @@ class Tado extends utils.Adapter {
 					case ('geolocationOverride'):
 						this.create_state(state_root_states + '.' + i, i, state_root_states[i]);
 						break;
-
 
 					case ('geolocationOverrideDisableTime'):
 						this.create_state(state_root_states + '.' + i, i, ZonesState_data[i]);
@@ -1294,15 +1293,15 @@ class Tado extends utils.Adapter {
 						this.create_state(state_root_states + '.' + i, i, JSON.stringify(ZonesState_data[i]));
 						break;
 
+					case ('runningOfflineSchedule'):
+						this.create_state(state_root_states + '.' + i, i, JSON.stringify(ZonesState_data[i]));
+						break;
+						
 					case ('openWindow'):
 						for (const x in ZonesState_data[i]){
 							// this.log.info(x + '   |   ' + y)
 							this.create_state(state_root_states + '.' +  i + '.' + x, x, ZonesState_data[i][x]);
 						}
-						break;
-						
-					case ('runningOfflineSchedule'):
-						this.create_state(state_root_states + '.' + i, i, JSON.stringify(ZonesState_data[i]));
 						break;
 						
 					case ('overlay'):
