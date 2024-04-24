@@ -1295,14 +1295,16 @@ class Tado extends utils.Adapter {
 						break;
 
 					case ('openWindow'):
-
 						for (const x in ZonesState_data[i]){
 							// this.log.info(x + '   |   ' + y)
 							this.create_state(state_root_states + '.' +  i + '.' + x, x, ZonesState_data[i][x]);
 						}
 						break;
-
-
+						
+					case ('runningOfflineSchedule'):
+						this.create_state(state_root_states + '.' + i, i, JSON.stringify(ZonesState_data[i]));
+						break;
+						
 					case ('overlay'):
 
 						this.log.debug('API data of overlay : ' + JSON.stringify(ZonesState_data[i]));
