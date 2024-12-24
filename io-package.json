@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "tado",
-        "version": "0.2.9",
+        "version": "0.2.8",
         "news": {
             "0.2.8": {
                 "en": "add isBalanceAcEligible",
